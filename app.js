@@ -33,7 +33,7 @@ config({ path:"./config/config.env" });
 app.use(
     cors({
 
-        origin: [FRONTEND_URI,DASHBOARD_URI],
+        origin: [process.env.FRONTEND_URI,process.env.DASHBOARD_URI],
         methods: ["GET","POST","PUT","DELETE"],
         credentials:true,
     })
