@@ -33,7 +33,7 @@ config({ path:"./config/config.env" });
 app.use(
     cors({
 
-        origin: ['http://localhost:5173','http://localhost:5174'],
+        origin: [FRONTEND_URI,DASHBOARD_URI],
         methods: ["GET","POST","PUT","DELETE"],
         credentials:true,
     })
